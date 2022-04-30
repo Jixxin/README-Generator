@@ -49,12 +49,12 @@ inquirer
 ${data.description}
 
 ## Installation Instructions
-${installationInstructions}
+${data.installationInstructions}
         
 ## How To Use
 ${data.usageInstructions}
-${data.photoLocation}
-${data.gifLocation}
+![Alt Text](${data.photoLocation})
+![Alt Text](${data.gifLocation})
         
 ## Contributing
 ${data.contributionGuidelines}`
