@@ -31,11 +31,6 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What is the file path to your gif of the project?',
-            name: 'gifLocation'
-        },
-        {
-            type: 'input',
             message: 'Please include any contributors for your project(if multple people contributed please separate their names with a ",").',
             name: 'contributionGuidelines'
         },
@@ -45,18 +40,22 @@ inquirer
         const readmeString = `
 # ${data.title}
 
-## Project description
+## Project Description
 ${data.description}
 
-## Installation Instructions
+## Table of Contents
+- [Installation](#installation)
+- [How to Use](#howtouse)
+- [Contribution](#contribution)
+
+## Installation
 ${data.installationInstructions}
         
 ## How To Use
 ${data.usageInstructions}
 ![Alt Text](${data.photoLocation})
-![Alt Text](${data.gifLocation})
         
-## Contributing
+## Contribution
 ${data.contributionGuidelines}`
         fs.writeFile(filename, readmeString, (err) =>
             err ? console.log(err) : console.log('Success!')
